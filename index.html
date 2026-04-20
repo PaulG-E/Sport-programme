@@ -2,14 +2,12 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<!-- Favicon emoji (fonctionne sur Chrome desktop) -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏃</text></svg>">
-
-<!-- Icône pour "Ajouter à l'écran d'accueil" sur mobile -->
-<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect width='200' height='200' rx='44' fill='%230e0e10'/><circle cx='100' cy='78' r='22' fill='none' stroke='%23d4ff00' stroke-width='5.5'/><path d='M54 152 L80 119 L100 137 L126 102 L148 152' fill='none' stroke='%23d4ff00' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marathon 6 mois</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏃</text></svg>">
+<title>Sport</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect width='200' height='200' rx='44' fill='%230e0e10'/><circle cx='100' cy='78' r='22' fill='none' stroke='%23d4ff00' stroke-width='5.5'/><path d='M54 152 L80 119 L100 137 L126 102 L148 152' fill='none' stroke='%23d4ff00' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect width='200' height='200' rx='44' fill='%230e0e10'/><circle cx='100' cy='78' r='22' fill='none' stroke='%23d4ff00' stroke-width='5.5'/><path d='M54 152 L80 119 L100 137 L126 102 L148 152' fill='none' stroke='%23d4ff00' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<meta name="apple-mobile-web-app-title" content="Sport">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -197,35 +195,50 @@ main{max-width:1100px;margin:0 auto;padding:2rem;}
 .phkm{font-family:var(--fd);font-size:1.6rem;font-weight:700;color:var(--accent);margin-top:8px;}
 .phkml{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;}
 
-/* CHATBOT */
-.chat-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
-.chat-btn{width:52px;height:52px;border-radius:50%;background:var(--accent);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.3rem;box-shadow:0 4px 20px rgba(212,255,0,.3);transition:transform .2s,box-shadow .2s;}
-.chat-btn:hover{transform:scale(1.07);box-shadow:0 6px 28px rgba(212,255,0,.4);}
-.chat-panel{width:360px;max-width:calc(100vw - 2rem);background:var(--surface);border:1px solid var(--border2);border-radius:var(--rl);overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.6);display:none;flex-direction:column;}
-.chat-panel.open{display:flex;}
-.chat-head{padding:1rem 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
-.chat-title{font-family:var(--fd);font-weight:700;font-size:1rem;}
-.chat-sub{font-size:11px;color:var(--muted);margin-top:2px;}
-.chat-close{background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.1rem;padding:4px;}
-.chat-close:hover{color:var(--ink);}
-.chat-msgs{height:320px;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:10px;}
-.chat-msgs::-webkit-scrollbar{width:4px;}
-.chat-msgs::-webkit-scrollbar-track{background:transparent;}
-.chat-msgs::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
-.msg{max-width:85%;padding:8px 12px;border-radius:10px;font-size:13px;line-height:1.55;}
-.msg-ai{background:var(--surface2);color:var(--ink);align-self:flex-start;border-radius:2px 10px 10px 10px;}
-.msg-user{background:rgba(212,255,0,.12);color:var(--ink);align-self:flex-end;border-radius:10px 2px 10px 10px;border:1px solid rgba(212,255,0,.15);}
-.msg-loading{background:var(--surface2);color:var(--muted);align-self:flex-start;border-radius:2px 10px 10px 10px;}
-.chat-input-row{padding:.75rem 1rem;border-top:1px solid var(--border);display:flex;gap:8px;align-items:flex-end;}
-.chat-input{flex:1;background:var(--surface2);border:1px solid var(--border2);border-radius:6px;padding:8px 12px;color:var(--ink);font-family:var(--fb);font-size:13px;resize:none;outline:none;min-height:38px;max-height:100px;line-height:1.4;}
-.chat-input:focus{border-color:rgba(212,255,0,.3);}
-.chat-input::placeholder{color:var(--muted);}
-.chat-send{background:var(--accent);border:none;border-radius:6px;width:34px;height:34px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity .15s;}
-.chat-send:hover{opacity:.85;}
-.chat-send svg{width:16px;height:16px;}
-.chat-suggestions{padding:0 1rem .75rem;display:flex;flex-direction:column;gap:5px;}
-.sugg{background:none;border:1px solid var(--border2);border-radius:6px;padding:6px 10px;font-size:11px;color:var(--muted2);cursor:pointer;text-align:left;font-family:var(--fb);transition:border-color .15s,color .15s;}
-.sugg:hover{border-color:rgba(212,255,0,.3);color:var(--ink);}
+/* RECETTES */
+.rec-cats{display:flex;gap:6px;margin-bottom:1.25rem;flex-wrap:wrap;}
+.rec-cat{padding:5px 14px;border-radius:2px;font-size:11px;font-weight:500;cursor:pointer;border:1px solid var(--border2);background:var(--surface);color:var(--muted);transition:all .15s;text-transform:uppercase;letter-spacing:.07em;}
+.rec-cat.on{background:var(--accent);color:#0a1100;border-color:var(--accent);}
+.rec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-bottom:1.5rem;}
+.rc{background:var(--surface);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;cursor:pointer;transition:border-color .15s;}
+.rc:hover{border-color:var(--border2);}
+.rc.open{border-color:var(--accent);}
+.rc-head{padding:1rem 1.25rem;display:flex;align-items:center;gap:12px;}
+.rc-emoji{font-size:1.5rem;flex-shrink:0;}
+.rc-name{font-family:var(--fd);font-weight:700;font-size:1rem;letter-spacing:.01em;}
+.rc-sub{font-size:11px;color:var(--muted);margin-top:2px;}
+.rc-tag{display:inline-block;font-size:9px;font-weight:500;padding:2px 6px;border-radius:2px;text-transform:uppercase;letter-spacing:.06em;margin-top:4px;}
+.rt-pre{background:rgba(96,165,250,.12);color:var(--run);}
+.rt-post{background:rgba(74,222,128,.12);color:var(--ua);}
+.rt-recup{background:rgba(251,191,36,.12);color:var(--legs);}
+.rt-repos{background:rgba(167,139,250,.12);color:var(--ub);}
+.rt-snack{background:rgba(244,114,182,.12);color:#f472b6;}
+.rc-body{display:none;padding:0 1.25rem 1.25rem;border-top:1px solid var(--border);}
+.rc.open .rc-body{display:block;}
+.rc-section{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:1rem 0 6px;}
+.rc-ingr{display:flex;flex-direction:column;gap:4px;margin-bottom:8px;}
+.rc-i{display:flex;justify-content:space-between;font-size:13px;color:var(--muted2);padding:3px 0;border-bottom:1px solid var(--border);}
+.rc-i:last-child{border-bottom:none;}
+.rc-iq{font-weight:500;color:var(--accent);font-size:12px;}
+.rc-steps{display:flex;flex-direction:column;gap:8px;}
+.rc-step{display:flex;gap:10px;align-items:flex-start;}
+.rc-stepn{font-family:var(--fd);font-weight:700;font-size:1.1rem;color:var(--accent);opacity:.5;flex-shrink:0;line-height:1.2;}
+.rc-stept{font-size:13px;color:var(--muted2);line-height:1.6;}
+.rc-macros{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;}
+.rc-macro{background:var(--surface2);border-radius:4px;padding:5px 10px;font-size:11px;color:var(--muted2);border:1px solid var(--border);}
+.rc-macro strong{color:var(--ink);font-weight:500;}
+
+/* CONSEILS */
+.tips-cats{display:flex;gap:6px;margin-bottom:1.25rem;flex-wrap:wrap;}
+.tip-cat{padding:5px 14px;border-radius:2px;font-size:11px;font-weight:500;cursor:pointer;border:1px solid var(--border2);background:var(--surface);color:var(--muted);transition:all .15s;text-transform:uppercase;letter-spacing:.07em;}
+.tip-cat.on{background:var(--accent);color:#0a1100;border-color:var(--accent);}
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
+.tc{background:var(--surface);border:1px solid var(--border);border-radius:var(--rl);padding:1.25rem;position:relative;overflow:hidden;}
+.tc::before{content:attr(data-num);font-family:var(--fd);font-weight:800;font-size:4rem;color:rgba(212,255,0,.04);position:absolute;right:.5rem;top:-.5rem;line-height:1;pointer-events:none;}
+.tc-cat{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:6px;}
+.tc-title{font-family:var(--fd);font-weight:700;font-size:1.05rem;margin-bottom:8px;line-height:1.1;}
+.tc-body{font-size:13px;color:var(--muted2);line-height:1.7;}
+.tc-acc{margin-top:8px;display:inline-block;font-size:11px;padding:3px 10px;border-radius:2px;background:rgba(212,255,0,.08);color:#a8cc00;border:1px solid rgba(212,255,0,.15);}
 
 /* RESPONSIVE */
 @media(max-width:640px){
@@ -236,7 +249,6 @@ main{max-width:1100px;margin:0 auto;padding:2rem;}
   .macro-row{grid-template-columns:1fr;}
   .hstats{gap:1.5rem;}
   .mg{grid-template-columns:1fr;}
-  .chat-panel{width:calc(100vw - 2rem);}
 }
 </style>
 </head>
@@ -244,7 +256,8 @@ main{max-width:1100px;margin:0 auto;padding:2rem;}
 
 <header>
   <div class="hi">
-    <h1>PROGRAMME<br><em>SPORT</em></h1>
+    <div class="hbadge">Programme Marathon · 6 mois</div>
+    <h1>COURS VITE.<br><em>SOULÈVE</em> LOURD.</h1>
     <p class="hdesc">26 semaines progressives. Méthode MAF · Zones cardio · 3 séances course · 2 séances muscu lourdes. Ton coach IA intégré adapte le programme à ton ressenti.</p>
     <div class="hstats">
       <div><div class="sv">26</div><div class="sl">Semaines</div></div>
@@ -262,6 +275,8 @@ main{max-width:1100px;margin:0 auto;padding:2rem;}
     <button class="nb" onclick="goTo('cardio',this)">Zones cardio</button>
     <button class="nb" onclick="goTo('nutrition',this)">Nutrition</button>
     <button class="nb" onclick="goTo('supps',this)">Compléments</button>
+    <button class="nb" onclick="goTo('recettes',this)">Recettes</button>
+    <button class="nb" onclick="goTo('conseils',this)">Conseils</button>
     <button class="nb" onclick="goTo('progression',this)">Progression</button>
   </div>
 </nav>
@@ -301,16 +316,17 @@ main{max-width:1100px;margin:0 auto;padding:2rem;}
       </div>
     </div>
     <div class="mc">
-      <div class="mch mcB"><span style="font-size:1.3rem">🏋️</span><div><div class="mcn">Séance B — Traction</div><div class="mcs">Jeudi · Barres de dips · 45 min</div></div></div>
+      <div class="mch mcB"><span style="font-size:1.3rem">🏋️</span><div><div class="mcn">Séance B — Tirage</div><div class="mcs">Samedi · Barres de dips uniquement · Sans barre de traction · 45 min</div></div></div>
       <div class="mcb">
         <div class="exl">
-          <div class="ex"><div><div class="exn">Tractions (barre haute)</div><div class="exno">Prise large. Si difficile : négatives (saute + descend en 5 sec).</div></div><div class="exs">4×max</div></div>
-          <div class="ex"><div><div class="exn">Rowing australien (barre basse)</div><div class="exno">Corps gainé, omoplates serrées. Tempo 2-1-3.</div></div><div class="exs">4×10</div></div>
-          <div class="ex"><div><div class="exn">Curl biceps (serviette ou élastique)</div><div class="exno">Supination complète. Coude fixe.</div></div><div class="exs">3×12</div></div>
-          <div class="ex"><div><div class="exn">Face pull (élastique)</div><div class="exno">Protège les épaules. Indispensable pour runners.</div></div><div class="exs">3×15</div></div>
-          <div class="ex"><div><div class="exn">Dead hang</div><div class="exno">Décompresse la colonne. 30 sec suspension.</div></div><div class="exs">3×30s</div></div>
+          <div class="ex"><div><div class="exn">Rowing australien (barre basse de dips)</div><div class="exno">Glisse-toi sous la barre basse, corps gainé, tire ta poitrine vers la barre. Omoplates serrées en haut. Tempo 2-1-3.</div></div><div class="exs">4×10</div></div>
+          <div class="ex"><div><div class="exn">Rowing australien pieds surélevés</div><div class="exno">Même exercice mais pieds posés sur une chaise. Angle plus horizontal = plus difficile. Progressif.</div></div><div class="exs">3×8</div></div>
+          <div class="ex"><div><div class="exn">Body row incliné (barre haute de dips)</div><div class="exno">Mains sur la barre haute, corps incliné à 45°, tire le buste vers la barre. Variation du rowing.</div></div><div class="exs">3×12</div></div>
+          <div class="ex"><div><div class="exn">Curl biceps serviette</div><div class="exno">Accroche une serviette à la barre basse, prise en supination, curl complet. Coude fixe.</div></div><div class="exs">3×12</div></div>
+          <div class="ex"><div><div class="exn">Face pull serviette (ou élastique)</div><div class="exno">Serviette autour de la barre, tire vers le visage en écartant les coudes. Protège les épaules.</div></div><div class="exs">3×15</div></div>
+          <div class="ex"><div><div class="exn">Dead hang (barre haute de dips)</div><div class="exno">Suspension passive. Décompresse la colonne vertébrale. Grip + épaules.</div></div><div class="exs">3×30s</div></div>
         </div>
-        <div class="pnote">Tractions : si pas encore 4×4, fais des négatives. Saute en haut, descends en 5 sec. Plus efficace que les élastiques.</div>
+        <div class="pnote">Le rowing australien sous barre de dips est l'équivalent direct des tractions pour les dorsaux et biceps. Progression : incline de plus en plus le corps vers l'horizontale au fil des semaines.</div>
       </div>
     </div>
   </div>
@@ -534,36 +550,41 @@ main{max-width:1100px;margin:0 auto;padding:2rem;}
   </div>
 </section>
 
-</main>
-
-<!-- ═══ CHATBOT ═══ -->
-<div class="chat-wrap">
-  <div class="chat-panel" id="chat-panel">
-    <div class="chat-head">
-      <div>
-        <div class="chat-title">Coach IA 🏃</div>
-        <div class="chat-sub">Dis-moi comment s'est passée ta séance</div>
-      </div>
-      <button class="chat-close" onclick="toggleChat()">✕</button>
-    </div>
-    <div class="chat-msgs" id="chat-msgs">
-      <div class="msg msg-ai">Salut ! Dis-moi comment s'est passée ta dernière séance — ressenti, douleurs, fatigue, niveau d'énergie. Je t'aide à adapter la suite de la semaine. 💪</div>
-    </div>
-    <div class="chat-suggestions" id="chat-suggs">
-      <button class="sugg" onclick="useSugg(this)">J'étais épuisé pendant la course</button>
-      <button class="sugg" onclick="useSugg(this)">J'ai du mal à rester en Z2, je monte trop vite</button>
-      <button class="sugg" onclick="useSugg(this)">J'ai une légère douleur au genou</button>
-      <button class="sugg" onclick="useSugg(this)">La séance muscu était trop facile</button>
-    </div>
-    <div class="chat-input-row">
-      <textarea class="chat-input" id="chat-input" placeholder="Ton ressenti sur la séance..." rows="1" onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
-      <button class="chat-send" onclick="sendMsg()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#0a1100" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-      </button>
-    </div>
+<!-- ═══ RECETTES ═══ -->
+<section id="recettes" class="sec">
+  <div class="sh">
+    <div class="st">Recettes <em>sport</em></div>
+    <p class="sd">22 recettes adaptées à ton programme — pré-entraînement, post-effort, récupération, repos et snacks. Clique sur une recette pour voir les détails.</p>
   </div>
-  <button class="chat-btn" onclick="toggleChat()" title="Coach IA">🏃</button>
-</div>
+  <div class="rec-cats">
+    <div class="rec-cat on" onclick="filterRec('all',this)">Toutes</div>
+    <div class="rec-cat" onclick="filterRec('pre',this)">Pré-entraînement</div>
+    <div class="rec-cat" onclick="filterRec('post',this)">Post-effort</div>
+    <div class="rec-cat" onclick="filterRec('recup',this)">Récupération</div>
+    <div class="rec-cat" onclick="filterRec('repos',this)">Jours de repos</div>
+    <div class="rec-cat" onclick="filterRec('snack',this)">Snacks</div>
+  </div>
+  <div class="rec-grid" id="rec-grid"></div>
+</section>
+
+<!-- ═══ CONSEILS ═══ -->
+<section id="conseils" class="sec">
+  <div class="sh">
+    <div class="st">Conseils <em>& astuces</em></div>
+    <p class="sd">Les conseils les plus importants pour progresser vite, éviter les blessures et rester motivé sur 6 mois.</p>
+  </div>
+  <div class="tips-cats">
+    <div class="tip-cat on" onclick="filterTips('all',this)">Tous</div>
+    <div class="tip-cat" onclick="filterTips('course',this)">Course</div>
+    <div class="tip-cat" onclick="filterTips('muscu',this)">Muscu</div>
+    <div class="tip-cat" onclick="filterTips('recup',this)">Récupération</div>
+    <div class="tip-cat" onclick="filterTips('mental',this)">Mental</div>
+    <div class="tip-cat" onclick="filterTips('blessure',this)">Blessures</div>
+  </div>
+  <div class="tips-grid" id="tips-grid"></div>
+</section>
+
+</main>
 
 <script>
 // ── PLANNING DATA ──
@@ -571,36 +592,36 @@ const PHASES = [
   {
     label:"Sem 1–4", full:"Phase 1 — Fondations MAF",
     days:[
-      { label:"Lun", t:"ua", tag:"Muscu A", emoji:"💪", title:"Séance A — Poussée",
+      { label:"Lun", t:"run", tag:"Longue Z2", emoji:"🏃", title:"Sortie longue — 45 min",
         blocks:[
-          {t:"ua",title:"Circuit poussée",body:"<ul><li>Dips barre parallèle : 4×8 (descente 3 sec)</li><li>Pompes pieds surélevés : 3×12</li><li>Pike push-up : 3×10</li><li>Dips triceps : 3×15</li><li>Planche rotation : 3×8/côté</li></ul>Repos 75 sec entre séries."},
-          {t:"ua",title:"Gainage",body:"Planche frontale 3×20 sec. Core solide = meilleure économie de course."}
-        ], tip:"Note tes séries et reps. La progression se mesure, elle ne se ressent pas toujours." },
+          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>45 min. LA séance clé de la semaine. Tu profites du repos du dimanche — jambes fraîches. Va encore plus lentement que les footings de semaine."},
+          {t:"run",title:"Hydratation",body:"Eau avant + 150ml toutes les 20 min. Emporte une petite bouteille."}
+        ], tip:"La longue en Z2 construit 70% de ton endurance marathon. Jamais deux courses consécutives — le lundi profite du repos du dimanche." },
       { label:"Mar", t:"legs", tag:"Jambes", emoji:"🦵", title:"Renforcement jambes",
         blocks:[
           {t:"legs",title:"Circuit — 3 tours",body:"<ul><li>Squats bulgares : 3×10/c</li><li>Fentes marchées : 3×12/c</li><li>Pont fessier 1 jambe : 3×12/c</li><li>Calf raises excentriques : 4×15</li><li>Nordic curl partiel : 3×8</li></ul>Repos 60 sec."},
           {t:"legs",title:"Core running",body:"Dead bug 3×10, hollow body 3×20 sec."}
-        ], tip:"Le nordic curl est inconfortable au début. C'est l'exercice qui prévient le plus les blessures ischio-jambiers." },
+        ], tip:"Le nordic curl est inconfortable au début. C'est l'exercice N°1 anti-blessures ischio-jambiers." },
       { label:"Mer", t:"run", tag:"Course Z2", emoji:"🏃", title:"Footing MAF — 30 min",
         blocks:[
-          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>30 min à FC controlée. Si tu dépasses 152 bpm : marche jusqu'à 140, puis reprends. En phase 1 tu marcheras peut-être souvent — c'est parfaitement normal."},
+          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>30 min à FC contrôlée. Si tu dépasses 152 bpm : marche jusqu'à 140, puis reprends. En phase 1 tu marcheras souvent — c'est parfaitement normal."},
           {t:"run",title:"Retour au calme",body:"5 min de marche + étirements mollets et psoas 30 sec chaque."}
-        ], tip:"Semaine 1 : si tu dois marcher 50% du temps pour rester en Z2, c'est parfait. Ne triche pas avec la FC." },
-      { label:"Jeu", t:"ub", tag:"Muscu B", emoji:"🏋️", title:"Séance B — Traction",
+        ], tip:"Si tu dois marcher 50% du temps pour rester en Z2, c'est parfait. Ne triche pas avec la FC." },
+      { label:"Jeu", t:"ua", tag:"Muscu A", emoji:"💪", title:"Séance A — Poussée",
         blocks:[
-          {t:"ub",title:"Circuit traction",body:"<ul><li>Tractions (ou négatives) : 4×max</li><li>Rowing australien barre basse : 4×10</li><li>Curl biceps serviette : 3×12</li><li>Face pull élastique : 3×15</li><li>Dead hang : 3×30 sec</li></ul>"},
-          {t:"ub",title:"Tractions débutant",body:"Si tu ne peux pas encore faire 4×4 tractions : fais des <strong>négatives</strong>. Saute en haut, descends en 5 sec. 4×5 négatives = meilleure progression que les élastiques."}
-        ], tip:"Traction + course = combo parfait. Le haut du corps fort améliore le balancé des bras et réduit la fatigue globale." },
+          {t:"ua",title:"Circuit poussée",body:"<ul><li>Dips barre parallèle : 4×8 (descente 3 sec)</li><li>Pompes pieds surélevés : 3×12</li><li>Pike push-up : 3×10</li><li>Dips triceps : 3×15</li><li>Planche rotation : 3×8/côté</li></ul>Repos 75 sec entre séries."},
+          {t:"ua",title:"Gainage",body:"Planche frontale 3×20 sec. Core solide = meilleure économie de course."}
+        ], tip:"Note tes séries et reps. La progression se mesure, elle ne se ressent pas toujours." },
       { label:"Ven", t:"run", tag:"Course Z2", emoji:"🏃", title:"Footing MAF — 30 min",
         blocks:[
-          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>30 min identiques à mercredi. Ton corps commence à s'adapter. Si tu arrives à courir plus que mercredi sans dépasser 152 bpm, c'est déjà un signe de progression."},
-          {t:"run",title:"Technique",body:"Attaque médio-pied, bras détendus à 90°, cadence ~170 pas/min. Ne regarde pas tes pieds."}
-        ], tip:"Deux footings faciles en semaine + une longue le samedi. C'est le bon rythme pour débuter sans se blesser." },
-      { label:"Sam", t:"run", tag:"Longue Z2", emoji:"🏃", title:"Sortie longue — 45 min",
+          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>30 min. Récupère de la muscu de jeudi, prépare les jambes pour la muscu B de samedi. Reste strictement en Z2."},
+          {t:"run",title:"Technique",body:"Attaque médio-pied, bras détendus à 90°, cadence ~170 pas/min. Regarde l'horizon."}
+        ], tip:"Vendredi jamais intense. Tu dois avoir les bras frais pour le rowing australien du samedi." },
+      { label:"Sam", t:"ub", tag:"Muscu B", emoji:"🏋️", title:"Séance B — Tirage",
         blocks:[
-          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>45 min. La longue sortie est LA séance clé de la semaine. Ne la rate jamais. Encore plus lente que les footings de semaine."},
-          {t:"run",title:"Hydratation",body:"Eau avant + 150ml toutes les 20 min. Emporte une petite bouteille."}
-        ], tip:"La longue sortie en Z2 construit 70% de ton endurance marathon. C'est ici que la vraie progression se fait." },
+          {t:"ub",title:"Circuit tirage — barres de dips",body:"<ul><li>Rowing australien barre basse : 4×10</li><li>Rowing australien pieds surélevés : 3×8</li><li>Body row incliné barre haute : 3×12</li><li>Curl biceps serviette : 3×12</li><li>Face pull serviette : 3×15</li><li>Dead hang barre haute : 3×30 sec</li></ul>"},
+          {t:"ub",title:"Comment faire le rowing australien",body:"Glisse-toi sous la barre basse de tes dips. Corps gainé et droit comme une planche. Tire ta poitrine vers la barre en serrant les omoplates. Descend lentement en 3 sec. C'est l'équivalent direct de la traction pour les dorsaux."}
+        ], tip:"Plus tu inclines ton corps vers l'horizontal, plus c'est difficile. Commence à 45° et progresse vers l'horizontal sur les semaines." },
       { label:"Dim", t:"rest", tag:"Repos", emoji:"😌", title:"Repos total",
         blocks:[
           {t:"rest",title:"Récupération complète",body:"Sommeil 8h minimum. Nutrition de récupération. Pas d'effort physique."},
@@ -611,69 +632,69 @@ const PHASES = [
   {
     label:"Sem 5–9", full:"Phase 2 — Base aérobie",
     days:[
-      { label:"Lun", t:"ua", tag:"Muscu A", emoji:"💪", title:"Séance A — Progression",
-        blocks:[
-          {t:"ua",title:"Circuit progressif",body:"<ul><li>Dips : 4×10 (ou descente 4 sec si trop facile)</li><li>Pompes archer : 3×8/côté</li><li>Pike push-up pieds surélevés : 3×12</li><li>Dips triceps tempo 3-1-2 : 3×12</li><li>Planche rotation : 3×10/côté</li></ul>"}
-        ], tip:"Chaque semaine : ajoute 1 rép ou rends l'exercice plus difficile. Loi de la surcharge progressive." },
-      { label:"Mar", t:"legs", tag:"Jambes +", emoji:"🦵", title:"Jambes — Volume augmenté",
-        blocks:[
-          {t:"legs",title:"Circuit intensifié",body:"<ul><li>Squats bulgares : 4×10/c</li><li>Fentes marchées : 4×12/c</li><li>Pont fessier 1 jambe : 3×15/c</li><li>Calf raises excentriques : 4×20</li><li>Nordic curl : 3×10</li><li>Isométrique mur : 3×40 sec</li></ul>"}
-        ], tip:"En phase 2 le volume jambes augmente avec la course. Les tendons ont besoin de se renforcer." },
-      { label:"Mer", t:"run", tag:"Course Z2", emoji:"🏃", title:"Footing MAF — 40 min",
-        blocks:[
-          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>40 min. Tu devrais déjà courir légèrement plus vite qu'en semaine 1 à même FC. C'est le signe que ça fonctionne."},
-          {t:"run",title:"Test de progression",body:"Toutes les 4 semaines, fais le même parcours et compare le temps à même FC. Progression = même FC, distance parcourue plus grande."}
-        ], tip:"La progression en Z2 est invisible au jour le jour mais évidente sur l'échelle des semaines." },
-      { label:"Jeu", t:"ub", tag:"Muscu B", emoji:"🏋️", title:"Séance B — Intensité",
-        blocks:[
-          {t:"ub",title:"Progression traction",body:"<ul><li>Tractions lentes (descente 4 sec) : 4×6-8</li><li>Rowing australien pieds surélevés : 4×10</li><li>Curl concentré : 3×12</li><li>Face pull + abduction : 3×12</li><li>Dead hang : 3×35 sec</li></ul>"}
-        ], tip:"Si tu arrives à 4×8 tractions contrôlées, c'est une vraie force. Prochaine étape : tractions lestées." },
-      { label:"Ven", t:"run", tag:"Course Z2", emoji:"🏃", title:"Footing MAF — 40 min",
-        blocks:[
-          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>40 min. Ce footing prépare les jambes pour la longue de samedi. Reste strictement en Z2, aucune tentation d'accélérer."}
-        ], tip:"Le vendredi n'est jamais intense. Tu dois arriver samedi avec des jambes fraîches." },
-      { label:"Sam", t:"run", tag:"Longue Z2", emoji:"🏃", title:"Sortie longue — 1h à 1h20",
+      { label:"Lun", t:"run", tag:"Longue Z2", emoji:"🏃", title:"Sortie longue — 1h à 1h20",
         blocks:[
           {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>1h à 1h20. Les longues augmentent de 10-15 min par semaine. Si tu as besoin de marcher, marche — reste en Z2."},
           {t:"run",title:"Nutrition",body:"Sortie >1h : prends de l'eau. Sortie >1h30 : 1 gel ou datte après 1h."}
-        ], tip:"À la fin de la phase 2, tes longues font 1h15-1h30. Tu progresses vite." },
+        ], tip:"Tu devrais déjà courir plus vite qu'en semaine 1 à même FC. C'est le signe que la méthode MAF fonctionne." },
+      { label:"Mar", t:"legs", tag:"Jambes +", emoji:"🦵", title:"Jambes — Volume augmenté",
+        blocks:[
+          {t:"legs",title:"Circuit intensifié",body:"<ul><li>Squats bulgares : 4×10/c</li><li>Fentes marchées : 4×12/c</li><li>Pont fessier 1 jambe : 3×15/c</li><li>Calf raises excentriques : 4×20</li><li>Nordic curl : 3×10</li><li>Isométrique mur : 3×40 sec</li></ul>"}
+        ], tip:"En phase 2 le volume jambes augmente avec la course. Les tendons ont besoin de se renforcer progressivement." },
+      { label:"Mer", t:"run", tag:"Course Z2", emoji:"🏃", title:"Footing MAF — 40 min",
+        blocks:[
+          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>40 min. Test toutes les 4 semaines : même parcours, compare le temps à même FC. Progression = tu parcours plus de distance à FC identique."}
+        ], tip:"La progression en Z2 est invisible au jour le jour mais évidente à l'échelle des semaines." },
+      { label:"Jeu", t:"ua", tag:"Muscu A", emoji:"💪", title:"Séance A — Progression",
+        blocks:[
+          {t:"ua",title:"Circuit progressif",body:"<ul><li>Dips : 4×10 (ou descente 4 sec si trop facile)</li><li>Pompes archer : 3×8/côté</li><li>Pike push-up pieds surélevés : 3×12</li><li>Dips triceps tempo 3-1-2 : 3×12</li><li>Planche rotation : 3×10/côté</li></ul>"}
+        ], tip:"Chaque semaine : +1 rép ou rends l'exercice plus difficile. Loi de la surcharge progressive." },
+      { label:"Ven", t:"run", tag:"Course Z2", emoji:"🏃", title:"Footing MAF — 40 min",
+        blocks:[
+          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>40 min. Prépare les bras pour la muscu B de samedi. Reste strictement en Z2, aucune tentation d'accélérer."}
+        ], tip:"Le vendredi n'est jamais intense. Tu dois arriver samedi avec des bras frais." },
+      { label:"Sam", t:"ub", tag:"Muscu B", emoji:"🏋️", title:"Séance B — Tirage progressif",
+        blocks:[
+          {t:"ub",title:"Circuit tirage intensifié",body:"<ul><li>Rowing australien pieds surélevés : 4×10</li><li>Rowing australien lent (descente 4 sec) : 3×8</li><li>Body row incliné barre haute : 3×12</li><li>Curl biceps serviette : 3×12</li><li>Face pull serviette : 3×15</li><li>Dead hang : 3×35 sec</li></ul>"},
+          {t:"ub",title:"Progression",body:"Plus tu inclines le corps vers l'horizontal au rowing australien, plus c'est difficile. En phase 2, vise 30-45° par rapport au sol."}
+        ], tip:"Objectif fin phase 2 : rowing australien à 30° du sol sur 4×10 reps contrôlées. C'est une vraie force de traction." },
       { label:"Dim", t:"rest", tag:"Récup active", emoji:"😌", title:"Récupération active — 20 min",
         blocks:[
           {t:"rest",title:"Jogging très lent",body:"<span class='zp zp2'>Z1 · &lt;122 bpm</span><br><br>20 min de jogging ultra lent ou marche rapide. Active la circulation sans stress."},
           {t:"rest",title:"Mobilité",body:"15-20 min : hanche, psoas, mollets, dos thoracique. Essentiel avec l'augmentation du volume."}
-        ], tip:"En phase 2 la récup active le dimanche. Très doux — le corps récupère mieux en mouvement qu'au repos total." }
+        ], tip:"En phase 2 on ajoute une récup active le dimanche. Le corps récupère mieux en mouvement qu'au repos total." }
     ]
   },
   {
     label:"Sem 10–16", full:"Phase 3 — Développement",
     days:[
-      { label:"Lun", t:"ua", tag:"Muscu A", emoji:"💪", title:"Séance A — Maintenance",
+      { label:"Lun", t:"run", tag:"Longue Z2/Z3", emoji:"🏃", title:"Sortie longue — 1h45 à 2h15",
         blocks:[
-          {t:"ua",title:"Volume réduit",body:"La course devient prioritaire. 3×8 dips, 3×10 pompes archer, 3×10 pike push-up surélevé. 35 min max."},
-          {t:"ua",title:"Focus gainage",body:"Planche 3×40 sec, rotation 3×10/côté. Le core doit tenir sur les longues distances."}
-        ], tip:"Phase 3 : pas question de progresser en muscu. Maintenir la force existante." },
+          {t:"run",title:"Structure",body:"<ul><li>Première heure : <span class='zp zp2'>Z2 stricte</span></li><li>Derniers 30-45 min : <span class='zp zp3'>Z3 légère</span> (allure marathon)</li></ul>"},
+          {t:"run",title:"Nutrition",body:"Gel ou datte toutes les 45 min à partir de 1h. Eau toutes les 20 min."}
+        ], tip:"En phase 3 tu commences à finir les longues à allure marathon. Tu apprends à gérer la fatigue sur la durée." },
       { label:"Mar", t:"legs", tag:"Jambes légères", emoji:"🦵", title:"Activation jambes",
         blocks:[
           {t:"legs",title:"Circuit allégé",body:"<ul><li>Squats bulgares : 2×10/c</li><li>Fentes : 2×12/c</li><li>Pont fessier : 2×15</li><li>Calf raises excentriques : 3×15</li></ul>Garde les jambes fraîches pour le tempo du mercredi."}
-        ], tip:"Le mardi jambes est allégé en phase 3. Le tempo du mercredi est prioritaire." },
+        ], tip:"Le mardi jambes est allégé en phase 3. La longue du lundi et le tempo du mercredi sont prioritaires." },
       { label:"Mer", t:"run", tag:"Tempo Z3", emoji:"🏃", title:"Séance tempo — 50 min",
         blocks:[
           {t:"run",title:"Structure",body:"<ul><li>15 min <span class='zp zp2'>Z2</span> échauffement</li><li>25 min <span class='zp zp3'>Z3 · 153–165 bpm</span></li><li>10 min <span class='zp zp2'>Z2</span> retour</li></ul>"},
           {t:"run",title:"Qu'est-ce que le tempo ?",body:"Soutenu mais soutenable. Tu peux dire 2-3 mots mais pas une phrase. Inconfortable — c'est voulu. Repousse le seuil lactique."}
         ], tip:"Le tempo n'est introduit qu'en phase 3. 9 semaines de Z2 pur d'abord — pas de raccourci." },
-      { label:"Jeu", t:"ub", tag:"Muscu B", emoji:"🏋️", title:"Séance B — Légère",
+      { label:"Jeu", t:"ua", tag:"Muscu A", emoji:"💪", title:"Séance A — Maintenance",
         blocks:[
-          {t:"ub",title:"Volume réduit",body:"<ul><li>Tractions lentes : 3×6</li><li>Rowing australien : 3×10</li><li>Face pull : 3×15</li><li>Dead hang : 2×35 sec</li></ul>35 min. Récupère pour la longue sortie."}
-        ], tip:"Séance B légère le jeudi : la longue du samedi commence à être sérieuse." },
+          {t:"ua",title:"Volume réduit",body:"La course devient prioritaire. 3×8 dips, 3×10 pompes archer, 3×10 pike push-up surélevé. 35 min max."},
+          {t:"ua",title:"Focus gainage",body:"Planche 3×40 sec, rotation 3×10/côté. Le core doit tenir sur les longues distances."}
+        ], tip:"Phase 3 : pas question de progresser en muscu. Maintenir la force existante." },
       { label:"Ven", t:"run", tag:"Course Z2", emoji:"🏃", title:"Footing récup — 45 min",
         blocks:[
-          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>45 min ultra lent. Récupère du tempo de mercredi, prépare les jambes pour la longue de samedi. Si la FC monte vite dès le départ, réduis à 30 min."}
-        ], tip:"Le vendredi récup est capital. Si vraiment fatigué, remplace par une marche de 30 min." },
-      { label:"Sam", t:"run", tag:"Longue Z2/Z3", emoji:"🏃", title:"Sortie longue — 1h45 à 2h15",
+          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>45 min ultra lent. Récupère du tempo de mercredi, prépare les bras pour la muscu B de samedi. Si la FC monte vite, réduis à 30 min."}
+        ], tip:"Vendredi récup : si vraiment fatigué, remplace par une marche de 30 min. Écoute ton corps." },
+      { label:"Sam", t:"ub", tag:"Muscu B", emoji:"🏋️", title:"Séance B — Tirage légère",
         blocks:[
-          {t:"run",title:"Structure",body:"<ul><li>Première heure : <span class='zp zp2'>Z2 stricte</span></li><li>Derniers 30-45 min : <span class='zp zp3'>Z3 légère</span> (allure marathon)</li></ul>"},
-          {t:"run",title:"Nutrition",body:"Gel ou datte toutes les 45 min à partir de 1h. Eau toutes les 20 min."}
-        ], tip:"En phase 3 tu finis les longues à allure marathon. Tu apprends à gérer la fatigue sur la durée." },
+          {t:"ub",title:"Volume réduit",body:"<ul><li>Rowing australien horizontal : 3×8</li><li>Body row incliné : 3×10</li><li>Curl biceps serviette : 3×12</li><li>Face pull serviette : 3×15</li><li>Dead hang : 2×35 sec</li></ul>35 min. Maintenir sans épuiser."}
+        ], tip:"Séance B légère en phase 3. La longue du lundi prochain commence à être sérieuse." },
       { label:"Dim", t:"rest", tag:"Récup", emoji:"😌", title:"Récup + mobilité",
         blocks:[
           {t:"rest",title:"Récupération",body:"Marche ou jogging Z1 20-30 min. Bain froid si possible."},
@@ -684,69 +705,69 @@ const PHASES = [
   {
     label:"Sem 17–22", full:"Phase 4 — Spécifique marathon",
     days:[
-      { label:"Lun", t:"ua", tag:"Muscu A légère", emoji:"💪", title:"Séance A — Très légère",
+      { label:"Lun", t:"run", tag:"Longue +", emoji:"🏃", title:"Sortie longue — 2h30 à 3h",
         blocks:[
-          {t:"ua",title:"Maintenance stricte",body:"2×8 dips, 2×10 pompes, 2×8 pike push-up. 25 min. Jamais à l'échec. La course est absolument prioritaire."}
-        ], tip:"En phase marathon spécifique, la muscu est au strict minimum." },
-      { label:"Mar", t:"run", tag:"Fractionné Z4", emoji:"🏃", title:"Fractionnés — 1h",
+          {t:"run",title:"La séance reine",body:"28-32 km. Première heure Z2, reste en Z2/Z3. Dernière heure à allure marathon cible si possible."},
+          {t:"run",title:"Nutrition course",body:"30g glucides à l'heure 1, 45-60g/h ensuite. Bois toutes les 20 min. Prends les mêmes ravitaillements qu'au marathon."}
+        ], tip:"C'est la séance la plus dure du programme. Récupère sérieusement le reste de la semaine." },
+      { label:"Mar", t:"legs", tag:"Jambes légères", emoji:"🦵", title:"Activation jambes",
+        blocks:[
+          {t:"legs",title:"Circuit minimal",body:"<ul><li>Squats bulgares : 2×8/c</li><li>Pont fessier : 2×15</li><li>Calf raises : 3×15</li></ul>20 min. Juste activer, pas fatiguer."}
+        ], tip:"Le mardi post-longue : très léger. Le corps récupère encore de la sortie du lundi." },
+      { label:"Mer", t:"run", tag:"Fractionné Z4", emoji:"🏃", title:"Fractionnés — 1h",
         blocks:[
           {t:"run",title:"Structure",body:"<ul><li>15 min <span class='zp zp2'>Z2</span> échauffement</li><li>6 × 1 km <span class='zp zp4'>Z4 · 166–177 bpm</span> + 90 sec récup Z1</li><li>10 min <span class='zp zp2'>Z2</span> retour</li></ul>"},
           {t:"run",title:"Objectif",body:"Développe la vitesse, repousse le VO2max. Si tu ne tiens pas Z4 sur 1 km, réduis à 800m."}
         ], tip:"Le Z4 n'apparaît qu'en phase 4. 16 semaines de base avant — aucun raccourci possible." },
-      { label:"Mer", t:"run", tag:"Z2 récup", emoji:"🏃", title:"Footing récup — 45 min",
+      { label:"Jeu", t:"ua", tag:"Muscu A légère", emoji:"💪", title:"Séance A — Très légère",
         blocks:[
-          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>Récupération des fractionnés de mardi. Ultra lent. Si la FC monte vite, réduis à 30 min — ton corps te dit qu'il est fatigué."}
-        ], tip:"Le mercredi récup est important. Si vraiment épuisé, remplace par une marche." },
-      { label:"Jeu", t:"ub", tag:"Muscu B", emoji:"🏋️", title:"Séance B — Maintenance",
+          {t:"ua",title:"Maintenance stricte",body:"2×8 dips, 2×10 pompes, 2×8 pike push-up. 25 min. Jamais à l'échec. La course est absolument prioritaire."}
+        ], tip:"En phase marathon spécifique, la muscu est au strict minimum." },
+      { label:"Ven", t:"run", tag:"Z2 récup", emoji:"🏃", title:"Footing récup — 40 min",
         blocks:[
-          {t:"ub",title:"Circuit court",body:"<ul><li>Tractions : 2×6</li><li>Rowing australien : 3×10</li><li>Face pull : 3×15</li></ul>30 min. Maintenir sans épuiser."}
-        ], tip:"Le jeudi muscu très léger en phase 4. Priorité absolue : arriver frais à la longue de samedi." },
-      { label:"Ven", t:"rest", tag:"Repos", emoji:"😌", title:"Repos ou mobilité 20 min",
+          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>Récupération des fractionnés de mercredi. Ultra lent. Si la FC monte vite dès le départ, réduis à 25 min ou marche."}
+        ], tip:"Si vraiment épuisé le vendredi, remplace par une marche. Reste frais pour la muscu B de samedi." },
+      { label:"Sam", t:"ub", tag:"Muscu B", emoji:"🏋️", title:"Séance B — Maintenance",
         blocks:[
-          {t:"rest",title:"Repos pré-longue",body:"Vendredi : repos complet ou mobilité douce 20 min. Prépare le corps pour la sortie la plus longue de ta vie."}
-        ], tip:"Ne change rien le vendredi avant la longue. Mange normalement, dors tôt, hydrate-toi." },
-      { label:"Sam", t:"run", tag:"Longue +", emoji:"🏃", title:"Sortie longue — 2h30 à 3h",
-        blocks:[
-          {t:"run",title:"La séance reine",body:"28-32 km. Première heure Z2, reste en Z2/Z3. Dernière heure à allure marathon cible si possible."},
-          {t:"run",title:"Nutrition course",body:"30g glucides à l'heure 1, 45-60g/h ensuite. Bois toutes les 20 min. Prends les mêmes ravitaillements qu'au marathon."}
-        ], tip:"C'est la séance la plus dure du programme. Récupère sérieusement le reste du week-end." },
+          {t:"ub",title:"Circuit court",body:"<ul><li>Rowing australien : 2×8</li><li>Body row : 2×10</li><li>Face pull serviette : 3×15</li><li>Dead hang : 2×30 sec</li></ul>25 min. Maintenir sans épuiser."}
+        ], tip:"Séance B très légère en phase 4. Priorité : récupérer pour la longue du lundi suivant." },
       { label:"Dim", t:"rest", tag:"Récup", emoji:"😌", title:"Récup active — 30 min",
         blocks:[
-          {t:"rest",title:"Post-longue",body:"Marche ou jogging Z1 20-30 min. Bain froid si disponible."},
+          {t:"rest",title:"Post-semaine chargée",body:"Marche ou jogging Z1 20-30 min. Bain froid si disponible."},
           {t:"rest",title:"Nutrition récup",body:"Repas riche en protéines et glucides complexes. Beaucoup d'eau. Dors longtemps."}
-        ], tip:"Après une sortie de 3h, ton dimanche est sacré. Mange bien, repose-toi." }
+        ], tip:"Phase 4 = semaines les plus dures du programme. Le dimanche est sacré. Mange bien, repose-toi." }
     ]
   },
   {
     label:"Sem 23–26", full:"Phase 5 — Affûtage & Marathon",
     days:[
-      { label:"Lun", t:"rest", tag:"Repos", emoji:"😌", title:"Repos ou mobilité",
+      { label:"Lun", t:"run", tag:"Longue affûtage", emoji:"🏃", title:"Sortie longue — 1h30 max",
         blocks:[
-          {t:"rest",title:"Début d'affûtage",body:"Marche légère 20 min, mobilité douce. Le corps reconstitue ses réserves glycogéniques."}
+          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>1h30 maximum. Volume réduit de 40% vs phase 4. Maintien de l'intensité. Les jambes chargent en glycogène."},
+          {t:"run",title:"Focus allure",body:"Quelques accélérations de 20 sec à allure marathon cible. Mémorise la sensation."}
         ], tip:"L'affûtage c'est résister à l'envie de faire plus. Fais confiance aux 22 semaines de travail." },
-      { label:"Mar", t:"run", tag:"Z2 léger", emoji:"🏃", title:"Footing court — 35 min",
+      { label:"Mar", t:"rest", tag:"Repos", emoji:"😌", title:"Repos ou mobilité",
         blocks:[
-          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>35 min avec quelques accélérations de 20 sec à allure marathon. Garde les jambes vives sans les fatiguer."}
-        ], tip:"Moins de volume, intensité maintenue. Principe de l'affûtage." },
-      { label:"Mer", t:"ua", tag:"Muscu légère", emoji:"💪", title:"Muscu légère — 25 min",
-        blocks:[
-          {t:"ua",title:"Entretien",body:"2×8 dips, 2×10 pompes, 2×10 rowing australien. Très court. Garder les muscles actifs, pas de progression."}
-        ], tip:"Pas de nouvelles sensations musculaires. Juste de l'entretien." },
-      { label:"Jeu", t:"run", tag:"Allure marathon", emoji:"🏃", title:"Séance allure — 40 min",
+          {t:"rest",title:"Récupération",body:"Marche légère 20 min, mobilité douce. Le corps reconstitue ses réserves glycogéniques."}
+        ], tip:"En affûtage le mardi est calme. Les réserves se chargent." },
+      { label:"Mer", t:"run", tag:"Allure marathon", emoji:"🏃", title:"Séance allure — 40 min",
         blocks:[
           {t:"run",title:"Structure",body:"<ul><li>10 min Z2 échauffement</li><li>20 min allure marathon exacte (Z2/Z3 frontière)</li><li>10 min Z2 retour</li></ul>"},
           {t:"run",title:"Test ravitaillement final",body:"Prends ton gel habituel. Vérifie que tout passe bien. Aucune surprise le jour J."}
-        ], tip:"Si cette allure semble facile après 20 min, tu es prêt. Si elle semble difficile, repos supplémentaire." },
-      { label:"Ven", t:"rest", tag:"Repos", emoji:"😌", title:"Repos complet",
+        ], tip:"Si cette allure semble facile après 20 min, tu es prêt. C'est exactement ce qu'on veut." },
+      { label:"Jeu", t:"ua", tag:"Muscu légère", emoji:"💪", title:"Muscu légère — 25 min",
+        blocks:[
+          {t:"ua",title:"Entretien",body:"2×8 dips, 2×10 pompes, 2×10 rowing australien. Très court. Garder les muscles actifs, pas de progression."}
+        ], tip:"Pas de nouvelles sensations musculaires. Juste de l'entretien." },
+      { label:"Ven", t:"run", tag:"Footing léger", emoji:"🏃", title:"Footing court — 30 min",
+        blocks:[
+          {t:"run",title:"Zone cible",body:"<span class='zp zp2'>Z2 · 122–152 bpm</span><br><br>30 min tranquille. Dernière vraie séance de course avant le marathon. Agréable, sans pression."}
+        ], tip:"Dernier footing de préparation. Profite-en." },
+      { label:"Sam", t:"rest", tag:"Repos", emoji:"😌", title:"Repos complet — veille marathon",
         blocks:[
           {t:"rest",title:"Préparation J-1",body:"Pas de course, pas de muscu. Prépare équipement et nutrition du jour J. Hydratation optimale."},
           {t:"rest",title:"Mental",body:"Visualise ta course. Départ calme, kilomètres réguliers, finish. Confiance dans le travail fait."}
-        ], tip:"Les jambes sont chargées, les réserves sont pleines. Tu es prêt." },
-      { label:"Sam", t:"run", tag:"Réveil muscu", emoji:"🏃", title:"Réveil musculaire — 20 min",
-        blocks:[
-          {t:"run",title:"La veille du marathon",body:"20 min jogging Z1 ultra lent + 4-5 strides de 20 sec. Réveille les muscles sans les fatiguer."},
-          {t:"run",title:"Préparation",body:"Repas glucidique léger le soir. Couche-toi tôt. Pose tout l'équipement. Règle les alarmes."}
-        ], tip:"La veille : mange normalement, hydrate-toi, dors. Le glycogène est déjà plein après 2 semaines d'affûtage." },
+        ], tip:"Les jambes sont chargées, les réserves sont pleines. Tu es prêt. Dors tôt." },
       { label:"Dim", t:"run", tag:"MARATHON", emoji:"🏁", title:"JOUR J — 42,195 km",
         blocks:[
           {t:"run",title:"Repas 3h avant",body:"Ton repas testé. Riz blanc ou flocons d'avoine + banane + café si habitué. Rien de nouveau."},
@@ -802,91 +823,170 @@ function goTo(id,btn){
   btn.classList.add('on');
 }
 
-// ── CHATBOT ──
-let chatOpen=false;
-const SYSTEM_PROMPT=`Tu es un coach sportif expert en marathon et musculation. L'utilisateur suit un programme de 26 semaines combinant méthode MAF (zones cardio), musculation haut du corps (2 séances lourdes aux barres de dips), renforcement jambes, et 3 séances de course par semaine.
+// ── RECETTES ──
+const RECETTES = [
+  { id:1, cat:'pre', emoji:'🍚', name:'Bol riz poulet soja', sub:'Pré-entraînement · 15 min', time:'15 min', macros:{kcal:'480',prot:'38g',carb:'62g',lip:'6g'},
+    ingr:[['Riz blanc cuit','200g'],['Blanc de poulet','150g'],['Sauce soja','2 cs'],['Ail en poudre','1 cc'],['Huile d\'olive','1 cs']],
+    steps:['Cuire le riz selon les instructions. Réserver.','Couper le poulet en lamelles. Faire chauffer l\'huile dans une poêle à feu vif.','Faire dorer le poulet 5-6 min. Ajouter la sauce soja et l\'ail. Mélanger 1 min.','Servir le poulet sur le riz. Manger 1h30 avant l\'entraînement.'] },
+  { id:2, cat:'pre', emoji:'🥣', name:'Avoine banane miel', sub:'Pré-entraînement · 5 min', time:'5 min', macros:{kcal:'420',prot:'12g',carb:'75g',lip:'8g'},
+    ingr:[['Flocons d\'avoine','80g'],['Lait demi-écrémé','200ml'],['Banane','1 moyenne'],['Miel','1 cs'],['Cannelle','1 pincée']],
+    steps:['Chauffer le lait dans une casserole ou micro-ondes 2 min.','Ajouter les flocons, mélanger et laisser gonfler 3 min.','Couper la banane en rondelles, déposer sur l\'avoine.','Arroser de miel, saupoudrer de cannelle. Consommer 1h30 avant.'] },
+  { id:3, cat:'pre', emoji:'🍠', name:'Patate douce œufs brouillés', sub:'Pré-entraînement · 20 min', time:'20 min', macros:{kcal:'390',prot:'22g',carb:'52g',lip:'10g'},
+    ingr:[['Patate douce','200g'],['Œufs entiers','3'],['Huile d\'olive','1 cs'],['Sel, poivre','qsp'],['Herbes de Provence','1 cc']],
+    steps:['Éplucher et couper la patate douce en dés. Faire rôtir au four 200°C 15 min avec huile et herbes.','Battre les œufs avec sel et poivre.','Faire chauffer une poêle à feu moyen, ajouter les œufs battus.','Remuer doucement jusqu\'à consistance crémeuse. Servir avec la patate douce.'] },
+  { id:4, cat:'pre', emoji:'🍝', name:'Pâtes thon sauce tomate', sub:'Pré-entraînement · 15 min', time:'15 min', macros:{kcal:'520',prot:'32g',carb:'78g',lip:'8g'},
+    ingr:[['Pâtes complètes','120g sèches'],['Thon en boîte','1 boîte 140g'],['Sauce tomate','150ml'],['Ail','1 gousse'],['Huile d\'olive','1 cs'],['Basilic','qsp']],
+    steps:['Cuire les pâtes al dente selon le paquet. Égoutter.','Faire revenir l\'ail émincé dans l\'huile 1 min.','Ajouter la sauce tomate, laisser mijoter 3 min.','Ajouter le thon égoutté, mélanger. Servir sur les pâtes avec le basilic.'] },
+  { id:5, cat:'pre', emoji:'🥜', name:'Pain complet beurre de cacahuète', sub:'Pré-entraînement rapide · 3 min', time:'3 min', macros:{kcal:'350',prot:'12g',carb:'42g',lip:'14g'},
+    ingr:[['Pain complet','2 tranches'],['Beurre de cacahuète (sans sucre ajouté)','2 cs'],['Banane','1/2'],['Miel','1 cc']],
+    steps:['Tartiner généreusement le pain de beurre de cacahuète.','Couper la banane en rondelles, déposer sur le pain.','Ajouter un filet de miel. Consommer 1h avant une séance courte.'] },
+  { id:6, cat:'post', emoji:'🐟', name:'Saumon riz courgettes', sub:'Post-effort · 20 min', time:'20 min', macros:{kcal:'520',prot:'42g',carb:'48g',lip:'14g'},
+    ingr:[['Filet de saumon','180g'],['Riz basmati cuit','150g'],['Courgettes','2 moyennes'],['Huile d\'olive','1 cs'],['Citron','1/2'],['Aneth','qsp']],
+    steps:['Couper les courgettes en rondelles. Faire revenir à l\'huile dans une poêle 5-6 min.','Assaisonner le saumon, cuire à la poêle 4 min par côté.','Servir le saumon sur le riz avec les courgettes.','Arroser de jus de citron et parsemer d\'aneth.'] },
+  { id:7, cat:'post', emoji:'🥚', name:'Omelette 4 œufs courgettes carottes', sub:'Post-effort · 12 min', time:'12 min', macros:{kcal:'380',prot:'28g',carb:'12g',lip:'24g'},
+    ingr:[['Œufs entiers','4'],['Courgette','1'],['Carotte','1'],['Fromage râpé','30g'],['Huile d\'olive','1 cs'],['Sel, poivre','qsp']],
+    steps:['Râper la carotte, couper la courgette en petits dés.','Faire revenir les légumes à l\'huile 5 min à feu moyen.','Battre les œufs, saler, poivrer. Verser sur les légumes.','Parsemer de fromage. Couvrir et cuire 4 min à feu doux jusqu\'à prise complète.'] },
+  { id:8, cat:'post', emoji:'🥑', name:'Bowl poulet quinoa avocat', sub:'Post-effort · 20 min', time:'20 min', macros:{kcal:'560',prot:'40g',carb:'45g',lip:'18g'},
+    ingr:[['Blanc de poulet','160g'],['Quinoa cuit','150g'],['Avocat','1/2'],['Maïs en boîte','50g'],['Sauce soja','1 cs'],['Citron vert','1/2']],
+    steps:['Cuire le quinoa selon le paquet (environ 15 min). Réserver.','Couper le poulet en dés, cuire à la poêle avec sauce soja 6-7 min.','Dresser le quinoa dans un bol. Ajouter le poulet, l\'avocat en tranches et le maïs.','Presser le citron vert sur le tout. Mélanger avant de manger.'] },
+  { id:9, cat:'post', emoji:'🥩', name:'Steak haché patate douce carottes rôties', sub:'Post-effort · 25 min', time:'25 min', macros:{kcal:'540',prot:'38g',carb:'48g',lip:'18g'},
+    ingr:[['Steak haché 5%','180g'],['Patate douce','200g'],['Carottes','2'],['Huile d\'olive','1 cs'],['Ail en poudre','1 cc'],['Sel, poivre','qsp']],
+    steps:['Éplucher et couper en dés patate douce et carottes. Rôtir au four 200°C avec huile et ail 20 min.','Assaisonner le steak haché. Cuire à la poêle 3 min par côté à feu vif.','Servir le steak avec les légumes rôtis. Sel et poivre selon goût.'] },
+  { id:10, cat:'post', emoji:'🥛', name:'Cottage cheese avoine fruits rouges', sub:'Post-effort · 3 min', time:'3 min', macros:{kcal:'320',prot:'26g',carb:'38g',lip:'5g'},
+    ingr:[['Cottage cheese','200g'],['Flocons d\'avoine','40g'],['Fruits rouges surgelés','80g'],['Miel','1 cc']],
+    steps:['Décongeler les fruits rouges au micro-ondes 1 min.','Verser le cottage cheese dans un bol.','Ajouter les flocons d\'avoine, les fruits rouges et le miel.','Mélanger et consommer dans les 30 min après la séance.'] },
+  { id:11, cat:'recup', emoji:'🐟', name:'Maquereau lentilles vinaigrette', sub:'Récupération · 5 min', time:'5 min', macros:{kcal:'440',prot:'32g',carb:'36g',lip:'18g'},
+    ingr:[['Maquereau en boîte','1 boîte 125g'],['Lentilles cuites en boîte','200g'],['Moutarde de Dijon','1 cc'],['Huile d\'olive','2 cs'],['Vinaigre de cidre','1 cs'],['Persil','qsp']],
+    steps:['Rincer et égoutter les lentilles.','Préparer la vinaigrette : mélanger moutarde, huile et vinaigre.','Égoutter le maquereau, l\'émietter sur les lentilles.','Arroser de vinaigrette, parsemer de persil. Mélanger et servir.'] },
+  { id:12, cat:'recup', emoji:'🍛', name:'Curry pois chiches carottes riz', sub:'Récupération · 25 min', time:'25 min', macros:{kcal:'510',prot:'18g',carb:'72g',lip:'14g'},
+    ingr:[['Pois chiches en boîte','240g'],['Carottes','2'],['Lait de coco','200ml'],['Riz basmati cuit','150g'],['Curry en poudre','2 cc'],['Oignon','1'],['Huile d\'olive','1 cs']],
+    steps:['Éplucher et couper l\'oignon et les carottes en dés.','Faire revenir l\'oignon à l\'huile 3 min. Ajouter les carottes et le curry, mélanger.','Ajouter les pois chiches égouttés et le lait de coco. Laisser mijoter 15 min.','Servir sur le riz basmati.'] },
+  { id:13, cat:'recup', emoji:'🍝', name:'Pâtes sardines aubergines sauce tomate', sub:'Récupération · 20 min', time:'20 min', macros:{kcal:'490',prot:'28g',carb:'62g',lip:'12g'},
+    ingr:[['Pâtes','120g sèches'],['Sardines en boîte','1 boîte 115g'],['Aubergine','1 petite'],['Sauce tomate','150ml'],['Ail','2 gousses'],['Huile d\'olive','1 cs'],['Basilic','qsp']],
+    steps:['Cuire les pâtes al dente. Égoutter.','Couper l\'aubergine en cubes. Faire dorer à l\'huile avec l\'ail 8 min.','Ajouter la sauce tomate, laisser mijoter 5 min.','Ajouter les sardines égouttées, mélanger délicatement. Servir sur les pâtes.'] },
+  { id:14, cat:'recup', emoji:'🍲', name:'Soupe lentilles corail carottes cumin', sub:'Récupération · 25 min', time:'25 min', macros:{kcal:'340',prot:'18g',carb:'52g',lip:'6g'},
+    ingr:[['Lentilles corail','150g'],['Carottes','3'],['Cumin en poudre','2 cc'],['Bouillon de légumes','700ml'],['Oignon','1'],['Huile d\'olive','1 cs'],['Pain complet','2 tranches']],
+    steps:['Éplucher et couper l\'oignon et les carottes.','Faire revenir l\'oignon à l\'huile 3 min. Ajouter le cumin, mélanger.','Ajouter les lentilles, les carottes et le bouillon. Cuire 20 min à feu moyen.','Mixer pour obtenir une soupe lisse. Servir avec le pain complet.'] },
+  { id:15, cat:'repos', emoji:'🍗', name:'Poulet rôti aubergines fromage blanc', sub:'Jour de repos · 30 min', time:'30 min', macros:{kcal:'420',prot:'44g',carb:'18g',lip:'16g'},
+    ingr:[['Cuisse de poulet','250g'],['Aubergines','2'],['Fromage blanc 0%','150g'],['Herbes de Provence','2 cc'],['Ail','2 gousses'],['Huile d\'olive','1 cs'],['Sel, poivre','qsp']],
+    steps:['Préchauffer le four à 200°C.','Couper les aubergines en tranches, badigeonner d\'huile et d\'herbes.','Placer le poulet et les aubergines sur une plaque. Enfourner 25-30 min.','Servir avec le fromage blanc assaisonné d\'ail et d\'herbes.'] },
+  { id:16, cat:'repos', emoji:'🥗', name:'Salade niçoise sans tomates', sub:'Jour de repos · 10 min', time:'10 min', macros:{kcal:'380',prot:'30g',carb:'22g',lip:'18g'},
+    ingr:[['Thon en boîte','140g'],['Œufs durs','2'],['Haricots verts cuits','100g'],['Olives noires','10'],['Poivron rouge','1/2'],['Vinaigrette','2 cs']],
+    steps:['Cuire les œufs durs 10 min à l\'eau bouillante. Refroidir et éplucher.','Couper le poivron en lamelles, couper les œufs en quartiers.','Dresser dans un saladier : haricots verts, thon émietté, œufs, olives, poivron.','Arroser de vinaigrette. Mélanger délicatement.'] },
+  { id:17, cat:'repos', emoji:'🥩', name:'Poêlée bœuf champignons courgettes', sub:'Jour de repos · 15 min', time:'15 min', macros:{kcal:'390',prot:'36g',carb:'14g',lip:'20g'},
+    ingr:[['Bœuf à poêler','180g'],['Champignons de Paris','150g'],['Courgettes','2'],['Ail','2 gousses'],['Huile d\'olive','1 cs'],['Thym','1 cc'],['Sel, poivre','qsp']],
+    steps:['Couper le bœuf en lanières, les champignons en quartiers, les courgettes en rondelles.','Faire chauffer l\'huile à feu vif. Saisir le bœuf 3 min. Réserver.','Dans la même poêle, faire revenir champignons et courgettes avec ail et thym 6 min.','Remettre le bœuf, mélanger 1 min. Assaisonner et servir.'] },
+  { id:18, cat:'repos', emoji:'🐟', name:'Cabillaud vapeur purée patate douce haricots', sub:'Jour de repos · 25 min', time:'25 min', macros:{kcal:'380',prot:'38g',carb:'38g',lip:'6g'},
+    ingr:[['Filet de cabillaud','200g'],['Patate douce','200g'],['Haricots verts','100g'],['Lait','50ml'],['Huile d\'olive','1 cc'],['Sel, poivre','qsp']],
+    steps:['Éplucher et cuire la patate douce en morceaux dans l\'eau bouillante 15 min.','Cuire le cabillaud à la vapeur 8-10 min. Cuire les haricots verts 5 min.','Écraser la patate douce avec le lait, l\'huile, sel et poivre.','Dresser : purée, poisson et haricots verts. Servir immédiatement.'] },
+  { id:19, cat:'snack', emoji:'🥛', name:'Yaourt grec noix miel', sub:'Snack · 2 min', time:'2 min', macros:{kcal:'280',prot:'16g',carb:'22g',lip:'14g'},
+    ingr:[['Yaourt grec nature','200g'],['Noix','20g'],['Miel','1 cs']],
+    steps:['Verser le yaourt grec dans un bol.','Concasser grossièrement les noix.','Déposer les noix sur le yaourt, arroser de miel. Manger immédiatement.'] },
+  { id:20, cat:'snack', emoji:'🥜', name:'Galettes riz beurre de cacahuète', sub:'Snack · 2 min', time:'2 min', macros:{kcal:'220',prot:'8g',carb:'26g',lip:'10g'},
+    ingr:[['Galettes de riz','3'],['Beurre de cacahuète (sans sucre ajouté)','2 cs']],
+    steps:['Tartiner généreusement les galettes de riz de beurre de cacahuète.','Consommer comme snack pré ou post-entraînement léger.','Idéal avant une sortie courte de moins d\'1h.'] },
+  { id:21, cat:'snack', emoji:'🌴', name:'Dattes amandes (snack de course)', sub:'Pendant la course · 1 min', time:'1 min', macros:{kcal:'180',prot:'4g',carb:'32g',lip:'6g'},
+    ingr:[['Dattes Medjool','3'],['Amandes','15g']],
+    steps:['Préparer à l\'avance dans un petit sac ziplock.','Consommer toutes les 45 min pendant la longue sortie à partir de 1h de course.','Mâcher soigneusement et boire de l\'eau après.'] },
+  { id:22, cat:'snack', emoji:'🍫', name:'Smoothie banane whey cacao', sub:'Post-effort rapide · 3 min', time:'3 min', macros:{kcal:'360',prot:'30g',carb:'42g',lip:'6g'},
+    ingr:[['Banane','1'],['Lait demi-écrémé','250ml'],['Whey protéine chocolat','1 dose (25g)'],['Cacao non sucré','1 cc'],['Glaçons','3-4']],
+    steps:['Mettre tous les ingrédients dans un blender.','Mixer 30 secondes jusqu\'à consistance lisse.','Consommer dans les 30 min après la séance.','Peut être préparé la veille et conservé au frigo.'] }
+];
 
-Le programme :
-- Lundi : Muscu A (poussée — dips, pompes, pike push-up)
-- Mardi : Jambes (squats bulgares, fentes, pont fessier, calf raises, nordic curl)
-- Mercredi : Course Z2 (30-45 min footing MAF)
-- Jeudi : Muscu B (traction — tractions, rowing australien, curl, face pull)
-- Vendredi : Course Z2 (30-45 min footing MAF)
-- Samedi : Longue sortie Z2 (45 min en phase 1 jusqu'à 3h en phase 4)
-- Dimanche : Repos
+// ── CONSEILS ──
+const CONSEILS = [
+  {cat:'course',num:'01',title:'La règle des 10%',body:'N\'augmente jamais ton kilométrage hebdomadaire de plus de 10% par rapport à la semaine précédente. C\'est la règle fondamentale anti-blessures en course à pied. Mieux vaut progresser lentement que s\'arrêter 3 mois.',acc:'Non-négociable'},
+  {cat:'course',num:'02',title:'80% de ton temps en Z2',body:'La majorité des débutants courent trop vite trop souvent. 80% de tes sorties doivent se faire en endurance fondamentale (tu peux tenir une conversation). 20% seulement en intensité. C\'est le ratio utilisé par tous les champions.',acc:'Méthode MAF'},
+  {cat:'course',num:'03',title:'Attaque médio-pied',body:'Évite d\'attaquer le sol avec le talon — ça crée un choc brutal sur les articulations. Pose le milieu du pied sous ton centre de gravité. Penche très légèrement le buste en avant. Bras détendus à 90°.',acc:'Technique de base'},
+  {cat:'course',num:'04',title:'Cadence ~170-180 pas/min',body:'Une cadence basse = foulée trop longue = risque de blessure. Vise 170-180 pas par minute. Pour mesurer : compte tes pas sur 15 sec et multiplie par 4. Écoute de la musique à 170-180 BPM aide naturellement.',acc:'Économie de course'},
+  {cat:'course',num:'05',title:'La longue sortie est sacrée',body:'Ne rate jamais ta longue sortie hebdomadaire. C\'est elle qui construit 70% de ton endurance marathon. Même si tu dois aller moins loin que prévu, fais-en une version raccourcie plutôt que de la sauter.',acc:'Priorité absolue'},
+  {cat:'course',num:'06',title:'Hydrate avant d\'avoir soif',body:'La soif est un signe de déshydratation déjà installée. Sur les sorties >45 min, bois 150-200ml toutes les 15-20 min sans attendre d\'avoir soif. Ton urine doit rester jaune pâle toute la journée.',acc:'Hydratation'},
+  {cat:'course',num:'07',title:'Test de progression MAF',body:'Toutes les 4 semaines, cours le même parcours à la même FC (environ 150 bpm). Si tu le fais en moins de temps, ta base aérobie progresse — même si tu ne le sens pas. C\'est le seul vrai indicateur de progression en Z2.',acc:'Mesure ta progression'},
+  {cat:'course',num:'08',title:'Semaine de récupération',body:'Toutes les 4 semaines, fais une semaine à -20-30% de volume. Pas parce que tu es fatigué, mais pour permettre aux tendons et ligaments de se renforcer. La progression se fait pendant la récup, pas pendant l\'effort.',acc:'Toutes les 4 semaines'},
+  {cat:'muscu',num:'09',title:'La surcharge progressive',body:'Pour progresser en force, le corps a besoin d\'un stress croissant. Chaque semaine : ajoute 1 répétition, ou ralentis la descente de 1 sec, ou rends l\'exercice plus difficile. Sans progression, tu stagnes en 4-6 semaines.',acc:'Loi fondamentale'},
+  {cat:'muscu',num:'10',title:'Le tempo de mouvement',body:'Un dips en 2 sec de descente / 0 pause / 2 sec de montée (tempo 2-0-2) est bien moins efficace qu\'un dips en 4 sec de descente / 1 sec de pause / 2 sec de montée (4-1-2). Le tempo lent = plus de tension musculaire = plus de force.',acc:'Technique avancée'},
+  {cat:'muscu',num:'11',title:'Jamais à l\'échec complet',body:'S\'arrêter 1-2 reps avant l\'échec musculaire est plus productif que d\'aller jusqu\'au bout. L\'échec complet fatigue le système nerveux et augmente le risque de blessure. Laisse toujours un peu en réserve.',acc:'Sécurité & progression'},
+  {cat:'muscu',num:'12',title:'Le rowing australien progresse ainsi',body:'Pour rendre le rowing australien sous barre de dips plus difficile : incline progressivement le corps vers l\'horizontal. À 45° c\'est facile, à 20° du sol c\'est très dur. C\'est ton outil principal pour progresser sans barre de traction.',acc:'Barres de dips uniquement'},
+  {cat:'muscu',num:'13',title:'Core = performance de course',body:'Un core faible fait que le bassin se balance à chaque foulée, ce qui gaspille de l\'énergie. Les exercices de gainage (planche, dead bug, hollow body) ne sont pas optionnels — ils améliorent directement ton économie de course.',acc:'Connexion muscu-course'},
+  {cat:'muscu',num:'14',title:'Les calf raises excentriques',body:'Monte vite sur la pointe des pieds, descend en 4 secondes. Ce mouvement excentrique renforce spécifiquement le tendon d\'Achille et prévient la tendinite — la blessure la plus fréquente chez les runners. 4×15 par semaine.',acc:'Anti-tendinite'},
+  {cat:'recup',num:'15',title:'Le sommeil est une séance d\'entraînement',body:'7-9h par nuit. C\'est pendant le sommeil que les muscles se réparent, le glycogène se recharge et les micro-lésions se résorbent. Moins de sommeil = moins de progression + plus de blessures. Pas de négociation possible.',acc:'Priorité N°1'},
+  {cat:'recup',num:'16',title:'Manger dans les 30 min post-effort',body:'La fenêtre anabolique est réelle : dans les 30 min après l\'effort, les muscles absorbent mieux les protéines et les glucides. 20-30g de protéines rapides + des glucides simples. Yaourt grec, whey, œufs.',acc:'Récupération optimale'},
+  {cat:'recup',num:'17',title:'La récupération active',body:'Un jogging très lent (Z1, <122 bpm) de 20 min le lendemain d\'une grosse séance accélère la récupération en activant la circulation sans stresser les muscles. C\'est plus efficace que le repos complet pour les douleurs musculaires.',acc:'J+1 après une grosse séance'},
+  {cat:'recup',num:'18',title:'Le bain froid ou contrasté',body:'Après les grosses longues sorties, alterner 30 sec d\'eau froide / 30 sec d\'eau chaude sous la douche (3-4 cycles) réduit l\'inflammation et les courbatures. Pas agréable, mais redoutablement efficace.',acc:'Après longue sortie'},
+  {cat:'mental',num:'19',title:'Faire confiance au processus lent',body:'Les premières semaines en Z2 peuvent sembler démoralisantes — tu cours presque en marchant. C\'est exactement ce qu\'il faut. Le corps construit une infrastructure aérobie invisible. Dans 2 mois tu courras 20% plus vite à même fréquence cardiaque.',acc:'Patience'},
+  {cat:'mental',num:'20',title:'Un mauvais entraînement n\'existe pas',body:'Si tu sors courir, même lentement, même moins longtemps que prévu — tu as gagné. La régularité sur 6 mois prime sur la performance de chaque séance. Le pire entraînement vaut mieux que celui qu\'on n\'a pas fait.',acc:'Régularité > performance'},
+  {cat:'mental',num:'21',title:'Visualise ton marathon',body:'2-3 fois par semaine, prends 2 min pour te visualiser courir ton marathon : la ligne de départ, les premiers km calmes, la fatigue au km 30, et la ligne d\'arrivée. La visualisation prépare le mental aux situations difficiles.',acc:'Préparation mentale'},
+  {cat:'mental',num:'22',title:'Utilise les mauvais jours',body:'Les jours où tu n\'as pas envie de t\'entraîner sont exactement ceux qui font la différence entre finir un marathon et ne jamais le courir. La discipline bat la motivation sur 6 mois. Commence, tu verras comment tu te sens.',acc:'Discipline'},
+  {cat:'blessure',num:'23',title:'Douleur vs gêne : apprends la différence',body:'Une gêne musculaire (courbatures) qui disparaît après quelques minutes de course = normal. Une douleur articulaire (genou, cheville, Achille) qui persiste ou s\'aggrave = signal d\'alarme. Arrête immédiatement et repose-toi.',acc:'Signal d\'alarme'},
+  {cat:'blessure',num:'24',title:'Genou du coureur (syndrome de la bandelette)',body:'Douleur sur le côté extérieur du genou après 20-30 min de course. Cause : faiblesse des fessiers + manque de mobilité. Traitement : repos, renforcement des abducteurs, rouleau de massage sur la bandelette ilio-tibiale.',acc:'Blessure courante'},
+  {cat:'blessure',num:'25',title:'Tendinite d\'Achille',body:'Douleur au tendon au-dessus du talon, surtout le matin. Prévention : calf raises excentriques 4×15 par semaine. Traitement : repos 1 semaine + calf raises excentriques uniquement. Ne pas courir sur une tendinite aiguë.',acc:'Prévention > guérison'},
+  {cat:'blessure',num:'26',title:'3 jours de repos valent mieux que 3 mois',body:'Le réflexe de "pousser malgré la douleur" transforme une blessure légère (3 jours de repos) en blessure sérieuse (3 mois d\'arrêt). Si tu doutes, repose-toi. Le programme peut toujours reprendre, pas les tendons abîmés.',acc:'Règle d\'or'},
+];
 
-Zones cardio (26-30 ans) : Z1 <122, Z2 122-152 (MAF), Z3 153-165, Z4 166-177 bpm.
+let recFilter='all', tipsFilter='all';
 
-Ton rôle : analyser le ressenti de l'utilisateur sur ses séances et proposer des ajustements concrets et personnalisés pour la semaine en cours ou suivante. Réponds toujours en français, de manière directe et motivante. Tes réponses font 3-6 phrases maximum. Si l'utilisateur mentionne une douleur, sois prudent et conseille le repos ou une consultation si nécessaire. Adapte le ton à un runner débutant motivé.`;
+function filterRec(cat,btn){
+  recFilter=cat;
+  document.querySelectorAll('.rec-cat').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  renderRec();
+}
+function filterTips(cat,btn){
+  tipsFilter=cat;
+  document.querySelectorAll('.tip-cat').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  renderTips();
+}
+function toggleRec(id){
+  const el=document.querySelector('.rc[data-id="'+id+'"]');
+  el.classList.toggle('open');
+}
+const CAT_LABELS={pre:'Pré-entraînement',post:'Post-effort',recup:'Récupération',repos:'Jour repos',snack:'Snack'};
+const TIP_LABELS={course:'Course à pied',muscu:'Musculation',recup:'Récupération',mental:'Mental',blessure:'Prévention blessures'};
 
-let chatHistory=[];
-
-function toggleChat(){
-  chatOpen=!chatOpen;
-  document.getElementById('chat-panel').classList.toggle('open',chatOpen);
+function recipeCard(r){
+  const ingrs=r.ingr.map(function(i){return '<div class="rc-i"><span>'+i[0]+'</span><span class="rc-iq">'+i[1]+'</span></div>';}).join('');
+  const steps=r.steps.map(function(s,i){return '<div class="rc-step"><div class="rc-stepn">'+(i+1)+'</div><div class="rc-stept">'+s+'</div></div>';}).join('');
+  return '<div class="rc" data-id="'+r.id+'" onclick="toggleRec('+r.id+')">'
+    +'<div class="rc-head"><div class="rc-emoji">'+r.emoji+'</div><div>'
+    +'<div class="rc-name">'+r.name+'</div>'
+    +'<div class="rc-sub">'+r.sub+'</div>'
+    +'<div class="rc-tag rt-'+r.cat+'">'+CAT_LABELS[r.cat]+'</div>'
+    +'</div></div>'
+    +'<div class="rc-body">'
+    +'<div class="rc-section">Ingrédients</div>'
+    +'<div class="rc-ingr">'+ingrs+'</div>'
+    +'<div class="rc-section">Préparation</div>'
+    +'<div class="rc-steps">'+steps+'</div>'
+    +'<div class="rc-macros">'
+    +'<div class="rc-macro"><strong>'+r.macros.kcal+'</strong> kcal</div>'
+    +'<div class="rc-macro"><strong>'+r.macros.prot+'</strong> protéines</div>'
+    +'<div class="rc-macro"><strong>'+r.macros.carb+'</strong> glucides</div>'
+    +'<div class="rc-macro"><strong>'+r.macros.lip+'</strong> lipides</div>'
+    +'</div></div></div>';
 }
 
-function useSugg(btn){
-  document.getElementById('chat-input').value=btn.textContent;
-  document.getElementById('chat-suggs').style.display='none';
-  sendMsg();
+function tipCard(t){
+  return '<div class="tc" data-num="'+t.num+'">'
+    +'<div class="tc-cat">'+TIP_LABELS[t.cat]+'</div>'
+    +'<div class="tc-title">'+t.title+'</div>'
+    +'<div class="tc-body">'+t.body+'</div>'
+    +'<div class="tc-acc">'+t.acc+'</div>'
+    +'</div>';
 }
 
-function handleKey(e){
-  if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMsg();}
+function renderRec(){
+  const list=recFilter==='all'?RECETTES:RECETTES.filter(function(r){return r.cat===recFilter;});
+  document.getElementById('rec-grid').innerHTML=list.map(recipeCard).join('');
 }
-
-function autoResize(el){
-  el.style.height='auto';
-  el.style.height=Math.min(el.scrollHeight,100)+'px';
-}
-
-function addMsg(text,role){
-  const msgs=document.getElementById('chat-msgs');
-  const div=document.createElement('div');
-  div.className=`msg msg-${role}`;
-  div.textContent=text;
-  msgs.appendChild(div);
-  msgs.scrollTop=msgs.scrollHeight;
-  return div;
-}
-
-async function sendMsg(){
-  const input=document.getElementById('chat-input');
-  const text=input.value.trim();
-  if(!text)return;
-  input.value='';
-  input.style.height='auto';
-  document.getElementById('chat-suggs').style.display='none';
-
-  addMsg(text,'user');
-  chatHistory.push({role:'user',content:text});
-
-  const loading=addMsg('…','loading');
-
-  try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
-        max_tokens:1000,
-        system:SYSTEM_PROMPT,
-        messages:chatHistory
-      })
-    });
-    const data=await res.json();
-    const reply=data.content?.[0]?.text||'Désolé, je n\'ai pas pu répondre.';
-    loading.remove();
-    addMsg(reply,'ai');
-    chatHistory.push({role:'assistant',content:reply});
-  }catch(e){
-    loading.remove();
-    addMsg('Erreur de connexion. Vérifie ta connexion internet.','ai');
-  }
+function renderTips(){
+  const list=tipsFilter==='all'?CONSEILS:CONSEILS.filter(function(t){return t.cat===tipsFilter;});
+  document.getElementById('tips-grid').innerHTML=list.map(tipCard).join('');
 }
 
 initPlanning();
+renderRec();
+renderTips();
 </script>
 </body>
 </html>
